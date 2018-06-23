@@ -1,0 +1,17 @@
+{
+  "name": "TASBot",
+  "version": "1.0.0",
+  "description": "TASBot javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juzz",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "fortnite": "^4.1.1",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.1"
+  }
+}
