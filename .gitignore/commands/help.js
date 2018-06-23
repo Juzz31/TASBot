@@ -11,8 +11,7 @@ let helpembed = new Discord.RichEmbed()
 .addField('botinfo', "The information of the bot")
 .addField('ping', "Ping of the bot")
 .addField('report', "Report a user, usage : !report [user] [reason]")
-.addField('serverinfo', "The information of the server")
-.addField('weather', "Look the weather in a location, usage : !weather [location]");
+.addField('serverinfo', "The information of the server");
 
 message.channel.send(helpembed);
 
