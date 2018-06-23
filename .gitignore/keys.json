@@ -1,0 +1,3 @@
+{
+  "fortnite": "https://api.fortnitetracker.com/v1/profile/{platform}/{epic-nickname}"
+}
