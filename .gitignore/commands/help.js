@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
 let bicon = bot.user.displayAvatarURL;
 let helpembed = new Discord.RichEmbed()
 .setTitle("Help menu")
+.setDescription("Bot by Juzz")
 .setThumbnail(bicon)
 .setColor("#00FF04")
 .addField('8ball', "Ask a question to the bot, usage : !8ball [question]")
