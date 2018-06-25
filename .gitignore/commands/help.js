@@ -27,7 +27,8 @@ let modembed = new Discord.RichEmbed()
 .addField('say', "make it talk the bot, usage : !say [message]")
 .addField('tempmute', "mute a user temporarily, usage : !tempmute [user] [time 1 d/h/m/s] [reason]")
 .addField('warn', "warn a user, usage : !warn [user] [reason]")
-.addField('warnlevel', "find the warnings of a user , usage : !warnlevel [user]");
+.addField('warnlevel', "find the warnings of a user , usage : !warnlevel [user]")
+.addField('ascii', "Send a message with ascii art");
 
 
 message.channel.send(modembed);
