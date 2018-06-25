@@ -8,8 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   let cont = message.content.slice(prefix.lenght).split(" ");
 
-  if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Vous avez besoin du rôle Administrateur pour faire ça !**");
-
+  if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply(`**${message.author.mentions} à fait une tentative de vol ! Arrêtez le !**`);
   if (!args[0]) {
     message.channel.send(`**Vous devez définir un montant ! --> ${prefix}addmoney [montant] [cible] **`);
     return;
