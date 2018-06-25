@@ -9,6 +9,7 @@
   "author": "Juzz",
   "license": "ISC",
   "dependencies": {
+    "discord-eco": "0.0.10",
     "discord.js": "^11.3.2",
     "fortnite": "^4.1.1",
     "fs": "0.0.1-security",
