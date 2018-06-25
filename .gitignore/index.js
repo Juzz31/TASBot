@@ -64,18 +64,42 @@ bot.on("message", async message => {
 
 bot.on("guildMemberAdd", member => {
 
-  if(member.guild.id !== ServerStats.guildID) return;
+  if(member.guild.id !== serverStats.guildID) return;
 
-  bot.channels.get(ServerStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
+  bot.channels.get(serverStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
+
+
+  let nmembed = new Discord.RichEmbed()
+  .setTitle("Nouveau Membre !")
+  .addField('Pseudo :', `<@${member.id}>`)
+  .addField("Heure d'arrivée :", member.joinedAt)
+  .addField("Nous sommes maintenant :", member.guild.memberCount);
+
+  member.guild.channels.get('459456127801884682').send(nmembed);
+
+  let nmlembed = new Discord.RichEmbed()
+  .setTitle("Nouveau Membre")
+  .addField('Pseudo :', `<@${member.id}>`)
+  .addField('ID :', member.id);
+
+  member.guild.channels.get('459714014595776522').send(nmlembed);
+
 
 });
 
 bot.on("guildMemberRemove", member => {
 
-  if(member.guild.id !== ServerStats.guildID) return;
+  if(member.guild.id !== serverStats.guildID) return;
 
-  bot.channels.get(ServerStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
+  bot.channels.get(serverStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
+
+  let dmembed = new Discord.RichEmbed()
+  .setTitle("Quelqu'un a quitté")
+  .addField('ID :', member.id)
+
+  member.guild.channels.get('459714014595776522').send(dmembed);
 });
+
 
 
 
