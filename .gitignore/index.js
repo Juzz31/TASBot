@@ -64,7 +64,7 @@ bot.on("message", async message => {
 
 bot.on("guildMemberAdd", member => {
 
-  if(member.guild.id !== serverStats.guildID) return;
+  if(member.guild.id !== ServerStats.guildID) return;
 
   bot.channels.get(ServerStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
 
@@ -72,7 +72,7 @@ bot.on("guildMemberAdd", member => {
 
 bot.on("guildMemberRemove", member => {
 
-  if(member.guild.id !== serverStats.guildID) return;
+  if(member.guild.id !== ServerStats.guildID) return;
 
   bot.channels.get(ServerStats.TotalUsersID).setName(`Membres Totaux : ${member.guild.memberCount}`);
 });
