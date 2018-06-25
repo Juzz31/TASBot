@@ -30,7 +30,7 @@ bot.on("ready", async () => {
 
 });
 
-const ServerStats = {
+const serverStats = {
 
   TotalUsersID: '459780626745262091',
   guildID: '459444722201657364'
