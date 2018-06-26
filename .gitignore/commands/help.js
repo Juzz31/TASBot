@@ -8,27 +8,28 @@ let helpembed = new Discord.RichEmbed()
 .setDescription("Bot by Juzz")
 .setThumbnail(bicon)
 .setColor("#00FF04")
-.addField('8ball', "Ask a question to the bot, usage : !8ball [question]")
-.addField('botinfo', "The information of the bot")
-.addField('ping', "Ping of the bot")
-.addField('report', "Report a user, usage : !report [user] [reason]")
-.addField('serverinfo', "The information of the server");
+.addField('8ball', "poser une question au bot, utilisation : !8ball [question]")
+.addField('botinfo', "Les informations du bot")
+.addField('ping', "Le ping du Bot")
+.addField('report', "Signaler un utilisateur, utilisation : !report [utilisateur] [raison]")
+.addField('serverinfo', "Les infos du serveur")
+.addField('notif', "Recevez les notifications relatives aux nouveautés du serveur");
 
 message.channel.send(helpembed);
 
 let modembed = new Discord.RichEmbed()
 .setTitle("Moderator help menu")
-.setDescription("it's necessary to create a #logs channel")
+.setDescription("il est nécessaire de créer un channel #logs")
 .setThumbnail(bicon)
 .setColor("#FF0000")
-.addField('ban', "Ban a user, usage : !ban [user] [reason]")
-.addField('clear', "Clear message(s), usage : !clear [number]")
-.addField('kick', "Kick a user, usage : !kick [user] [Reason]")
-.addField('say', "make it talk the bot, usage : !say [message]")
-.addField('tempmute', "mute a user temporarily, usage : !tempmute [user] [time 1 d/h/m/s] [reason]")
-.addField('warn', "warn a user, usage : !warn [user] [reason]")
-.addField('warnlevel', "find the warnings of a user , usage : !warnlevel [user]")
-.addField('ascii', "Send a message with ascii art");
+.addField('ban', "Bannir un utilisateur, utilisation : !ban [utilisateur] [raison]")
+.addField('clear', "Clear des message(s), utilisation : !clear [number]")
+.addField('kick', "Kicker un utilisateur, utilisation : !kick [user] [Reason]")
+.addField('say', "Faire parler le bot, utilisation : !say [message]")
+.addField('tempmute', "mute un utilisateur temporellement, utilisation : !tempmute [utilisateur] [temps 1 d/h/m/s] [raison]")
+.addField('warn', "warn un utilisateur, utilisation : !warn [utilisateur] [raison]")
+.addField('warnlevel', "Trouver les warns d'un utilisateur , utilisation : !warnlevel [utilisateur]")
+.addField('ascii', "Envoyer un message sous forme d'ascii");
 
 
 message.channel.send(modembed);
