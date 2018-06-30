@@ -1,10 +1,12 @@
 const botconfig = require("./botconfig.json");
+const tokenfile = require("./token.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
+
 let purple = botconfig.purple;
-var prefix = botconfig.prefix;
+var prefix = botconfig.prefix
 
 const size    = botconfig.colors;
 const rainbow = new Array(size);
@@ -43,6 +45,7 @@ function changeColor() {
     }
   }
 }
+
 
 fs.readdir("./commands/", (err, files) => {
 
