@@ -1,0 +1,11 @@
+{
+
+  "Rainbow": {
+    "name" : "Rôle Rainbow",
+    "type" : "Rôle",
+    "price" : "1000",
+    "desc" : "Rôle qui change de couleur"
+  }
+
+
+}
