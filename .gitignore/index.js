@@ -71,18 +71,18 @@ bot.on("guildMemberAdd", member => {
 
   let nmembed = new Discord.RichEmbed()
   .setTitle("Nouveau Membre !")
-  .addField('Pseudo :', `<@${member.id}>`)
+  .addField('Pseudo :', member.user.tag)
   .addField("Heure d'arrivée :", member.joinedAt)
   .addField("Nous sommes maintenant :", member.guild.memberCount);
 
-  member.guild.channels.get('459456127801884682').send(nmembed);
+  member.guild.channels.get('459071945925853186').send(nmembed);
 
   let nmlembed = new Discord.RichEmbed()
   .setTitle("Nouveau Membre")
-  .addField('Pseudo :', `<@${member.id}>`)
+  .addField('Pseudo :', member.user.tag)
   .addField('ID :', member.id);
 
-  member.guild.channels.get('459714014595776522').send(nmlembed);
+  member.guild.channels.get('459344148143538176').send(nmlembed);
 
 
 });
@@ -95,9 +95,10 @@ bot.on("guildMemberRemove", member => {
 
   let dmembed = new Discord.RichEmbed()
   .setTitle("Quelqu'un a quitté")
-  .addField('ID :', member.id)
+  .addField('Pseudo :', member.user.username)
+  .addField('ID :', member.id);
 
-  member.guild.channels.get('459714014595776522').send(dmembed);
+  member.guild.channels.get('459344148143538176').send(dmembed);
 });
 
 
