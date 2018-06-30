@@ -27,7 +27,7 @@ if (!args.join(" ")) { // Run if no item specified...
 
     // Now that we have the categories we can start the embed
     const embed = new Discord.RichEmbed()
-        .setDescription(`Available Items`)
+        .setDescription(`Items disponibles`)
         .setColor(0xD4AF37)
 
     for (var i = 0; i < categories.length; i++) { // This runs off of how many categories there are. - MAKE SURE YOU DELETE THAT = IF YOU ADDED IT.
@@ -74,19 +74,19 @@ for (var i in items) { // Make sure you have the correct syntax for this.
 
 // If the item wasn't found, itemName won't be defined
 if (itemName === '') {
-    return message.channel.send(`**Item ${args.join(" ").trim()} not found.**`)
+    return message.channel.send(`**L'item ${args.join(" ").trim()} n'as pas été trouvé.**`)
 }
 
 // Now, lets check if they have enough money.
 economy.fetchBalance(message.author.id).then((i) => { // Lets fix a few errors - If you use the unique guild thing, do this.
     if (i.money <= itemPrice) { // It's supposed to be like this instead...
 
-        return message.channel.send(`**You don't have enough money for this item.**`);
+        return message.channel.send(`**Vous n'avez pas assez d'argent pour acheter cet item.**`);
     }
 
     economy.updateBalance(message.author.id, parseInt(`-${itemPrice}`)).then((i) => {
 
-        message.channel.send('**You bought ' + itemName + '!**');
+        message.channel.send('**Vous avez bien acheté ' + itemName + '!**');
 
         // You can have IF statements here to run something when they buy an item.
         if (itemName === 'Rôle Rainbow') {
