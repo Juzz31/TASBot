@@ -1,11 +1,12 @@
 {
   "prefix": "!",
-  
-    "servers": [
-		"459444722201657364"
+
+  "servers": [
+		"459071945925853184"
 	],
 	"roleName": "Rainbow",
 	"colors": 12,
 	"speed": 20000,
 	"logging": true
 }
+
