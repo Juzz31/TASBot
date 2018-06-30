@@ -1,3 +1,11 @@
 {
-  "prefix": "!"
+  "prefix": "!",
+  
+    "servers": [
+		"459071945925853184"
+	],
+	"roleName": "Meilleurs vendeur | VIP",
+	"colors": 12,
+	"speed": 20000,
+	"logging": true
 }
