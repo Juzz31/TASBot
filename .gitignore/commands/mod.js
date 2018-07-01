@@ -15,7 +15,12 @@ module.exports.run = async (bot, message, args) => {
   .addField("auteur :", message.author.tag)
   .addField('Candidature :', candidMessage);
 
-  message.guild.channels.find('name', "👮-débat-candid").send(mdembed);
+  message.guild.channels.find('name', "👮-débat-candid").send(mdembed)
+    .then((newMessage) => {
+      newMessage.react("👍");
+      newMessage.react("👎");
+      newMessage.pin()
+  });
 
 }
 
