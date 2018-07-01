@@ -13,7 +13,8 @@ let helpembed = new Discord.RichEmbed()
 .addField('ping', "Le ping du Bot")
 .addField('report', "Signaler un utilisateur, utilisation : !report [utilisateur] [raison]")
 .addField('serverinfo', "Les infos du serveur")
-.addField('notif', "Recevez les notifications relatives aux nouveautés du serveur");
+.addField('notif', "Recevez les notifications relatives aux nouveautés du serveur")
+.addField('mod', "postez votre candidature en tant que modérateur");
 
 message.channel.send(helpembed);
 
