@@ -37,6 +37,10 @@ function changeColor() {
     bot.guilds.get(servers[index]).roles.find('name', botconfig.roleName).setColor(rainbow[place])
 		.catch(console.error);
 
+     if(config.logging){
+      	   console.log(`[ColorChanger] Changed color to ${rainbow[place]} in server: ${servers[index]}`);
+    	}
+	  
     if(place == (size - 1)){
       place = 0;
     }else{
